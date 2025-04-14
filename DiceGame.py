@@ -1,11 +1,8 @@
 """
-This is a simulation dice game, two players start with a set amount of
+This is a simulation dice game. Two players start with a set amount of
 money and take turns rolling a custom die. Rolls of 1–3 reduce a player's funds,
 while rolls of 4–6 let them take money from their opponent.
 The game continues until one player runs out of funds.
-
-Group 15
-Bella Illingworth, Drew Hansen, Nikko Higgins, Ryan DiGiallonardo
 """
 
 import random
@@ -37,7 +34,7 @@ while True:
         else:
             break
 
-#variables for collectiong statistic     
+#variables for collecting statistics     
 dice = [1,2,3,4,5,6]
 p1_avg_max = 0
 p2_avg_max = 0
@@ -63,7 +60,7 @@ for i in range(reps):
         player2_roll = player2_roll[0]    
         player2_diff = 0
         
-    #if roll 1, 2 , or 3                    
+    #if roll 1, 2, or 3                    
         if player1_roll <= 3:
             player1_diff = -1 * player1_roll
         else:
@@ -111,7 +108,7 @@ p2_avg_max = p2_avg_max / reps
 p1_win_pct = p1_wins / reps
 p2_win_pct = p2_wins / reps
 
-avg_rounds = reps / rounds_count
+avg_rounds = rounds_count / reps
 
 #Display the results
 print(f'Average ending amount for Player 1 : ${average1:.2f}')
